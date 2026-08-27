@@ -15,3 +15,16 @@ int mandelbrot_iterations(double c_real, double c_imag, int max_iter){
     }
     return iter;
 }
+
+void registrar_evidencia(const char *mensagem){
+    FILE *arquivo = fopen("evidencias.log", "a");
+    if(arquivo == NULL) return;
+    fprintf(arquivo, "%s\n", mensagem);
+    fclose(arquivo);
+}
+void registrar_tempo(const char *implementacao, double tempo){
+    FILE *arquivo = fopen("times.txt", "a");
+    if(arquivo == NULL) return;
+    fprintf(arquivo, "%s: %.6f segundos\n", implementacao, tempo);
+    fclose(arquivo);
+}

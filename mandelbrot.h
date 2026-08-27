@@ -4,6 +4,7 @@
 #define RE_MAX 1.0
 #define IM_MIN -1.5
 #define IM_MAX 1.5
+#include <stdio.h>
 
 typedef struct{
     int width;
@@ -21,5 +22,8 @@ void compute_serial(const Config *cfg, int *image);
 void compute_openmp(const Config *cfg, int *image);
 int compute_pthreads1(const Config *cfg, int *image);
 int compute_pthreads2(const Config *cfg, int *image);
+
+void registrar_evidencia(const char *mensagem);
+void registrar_tempo(const char *implementacao, double tempo);
 
 #endif
