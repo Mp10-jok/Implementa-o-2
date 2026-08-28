@@ -16,6 +16,14 @@ int mandelbrot_iterations(double c_real, double c_imag, int max_iter){
     return iter;
 }
 
+int *alloc_image(int width, int height){
+    int *image = malloc((size_t)width * (siz_t)height * sizeof(int));
+    if(image == NULL){
+        fprintf(stderr, "Erro ao alocar memoria pra imagem (%dx%d)\n", width, height);
+    }
+    return image;
+}
+
 void registrar_evidencia(const char *mensagem){
     FILE *arquivo = fopen("evidencias.log", "a");
     if(arquivo == NULL) return;
