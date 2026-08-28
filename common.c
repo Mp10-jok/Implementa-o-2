@@ -30,6 +30,24 @@ void normalize_image(int *image, int width, int height, int max_iter){
     }
 }
 
+int write_pgm(const char *filename, const int *image, int width, int height){
+    FILE *f = fopen(filename, "w");
+    if(f == NULL){
+        fprintf(stderr, "Erro!! O arquivo de saída nao foi criado '%s'\n", filename);
+        return -1;
+    }
+
+    for(int y = 0; y < height; y++){
+        for(int x = 0; x < width; x++){
+            fprintf(f, "%d", image[y * width + x]);
+            if(x < width - 1) fputc(' ', f);
+        }
+        fputc('\n', f);
+    }
+
+    fclose(f);
+    return 0;
+}
 void registrar_evidencia(const char *mensagem){
     FILE *arquivo = fopen("evidencias.log", "a");
     if(arquivo == NULL) return;
