@@ -24,6 +24,12 @@ int *alloc_image(int width, int height){
     return image;
 }
 
+void normalize_image(int *image, int width, int height, int max_iter){
+    for(int i = 0; i < width * height; i++){
+        image[i] = (int)((double)image[i] / (double)max_iter *255.0);
+    }
+}
+
 void registrar_evidencia(const char *mensagem){
     FILE *arquivo = fopen("evidencias.log", "a");
     if(arquivo == NULL) return;
