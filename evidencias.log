@@ -55,3 +55,10 @@ make: *** [main.o] Error 1
       |                        ^ ~~~~~
       |                          *
 2 errors generated.
+Undefined symbols for architecture arm64:
+  "_main", referenced from:
+      <initial-undefines>
+  "_mandelbrot_iterations", referenced from:
+      _worker2 in pthreads2-37051e.o
+ld: symbol(s) not found for architecture arm64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)

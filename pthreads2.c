@@ -5,7 +5,7 @@
 
 typedef struct{
     const Config *cfg;
-    int image;
+    int *image;
     int *next_row;
     pthread_mutex_t *mutex;
 } ThreadsArgs2;
