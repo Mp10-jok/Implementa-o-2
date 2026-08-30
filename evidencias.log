@@ -1,0 +1,36 @@
+Undefined symbols for architecture arm64:
+  "_alloc_image", referenced from:
+      _main in main-94a74d.o
+      _main in main-94a74d.o
+      _main in main-94a74d.o
+      _main in main-94a74d.o
+  "_compute_openmp", referenced from:
+      _main in main-94a74d.o
+  "_compute_pthreads1", referenced from:
+      _main in main-94a74d.o
+  "_compute_pthreads2", referenced from:
+      _main in main-94a74d.o
+  "_compute_serial", referenced from:
+      _main in main-94a74d.o
+  "_normalize_image", referenced from:
+      _main in main-94a74d.o
+      _main in main-94a74d.o
+      _main in main-94a74d.o
+      _main in main-94a74d.o
+  "_write_pgm", referenced from:
+      _main in main-94a74d.o
+      _main in main-94a74d.o
+      _main in main-94a74d.o
+      _main in main-94a74d.o
+ld: symbol(s) not found for architecture arm64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+
+ *  The terminal process "gcc '-Wall', '-Wextra', '-g3', '/Users/marciorperez/Documents/mrpf/main.c', '-o', '/Users/marciorperez/Documents/mrpf/output/main'" failed to launch (exit code: 1). 
+ *  Terminal will be reused by tasks, press any key to close it. 
+
+ *  Executing task: gcc -Wall -Wextra -g3 /Users/marciorperez/Documents/mrpf/common.c -o /Users/marciorperez/Documents/mrpf/output/common 
+
+/Users/marciorperez/Documents/mrpf/common.c:20:42: error: use of undeclared identifier 'siz_t'
+   20 |     int *image = malloc((size_t)width * (siz_t)height * sizeof(int));
+      |                                          ^
+1 error generated.
