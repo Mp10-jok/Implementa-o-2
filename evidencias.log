@@ -34,3 +34,10 @@ clang: error: linker command failed with exit code 1 (use -v to see invocation)
    20 |     int *image = malloc((size_t)width * (siz_t)height * sizeof(int));
       |                                          ^
 1 error generated.
+
+Undefined symbols
+for architecture arm64:
+  "_main", referenced from:
+      <initial-undefines>
+ld: symbol(s) not found for architecture arm64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
