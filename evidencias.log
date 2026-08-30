@@ -41,3 +41,7 @@ for architecture arm64:
       <initial-undefines>
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
+gcc -Wall -Wextra -02 -std=c11 -fopenmp -c main.c -o main.o
+clang: error: unknown argument: '-02'
+clang: error: unsupported option '-fopenmp'
+make: *** [main.o] Error 1

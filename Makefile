@@ -1,5 +1,5 @@
-CC = gcc
-CFLAGS = -Wall -Wextra -02 -std=c11 -fopenmp
+CC = gcc-16
+CFLAGS = -Wall -Wextra -O2 -std=c11 -fopenmp
 LDFLAGS = -lpthread -lm -fopenmp
 
 SRC = main.c common.c serial.c openmp_impl.c pthreads1.c pthreads2.c
@@ -18,3 +18,4 @@ clean:
 		rm -f $(OBJ) $(TARGET) *.pgm times.txt
 
 .PHONY: all clean
+
