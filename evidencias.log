@@ -73,3 +73,6 @@ Undefined symbols for architecture arm64:
 ld: symbol(s) not found for architecture arm64
 collect2: error: ld returned 1 exit status
 make: *** [mandelbrot] Error 1
+marciorperez@MacBook-Air-de-Marcio mrpf % ./mandelbrot 800 300 4000 2
+marciorperez@MacBook-Air-de-Marcio mrpf % 
+ *  History restored 
