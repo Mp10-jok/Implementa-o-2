@@ -26,7 +26,7 @@ static void *worker1(void *arg){
     return NULL;
 }
 
-int compute_threads1(const Config *cfg, int *image){
+int compute_pthreads1(const Config *cfg, int *image){
     int n = cfg->num_threads;
     pthread_t *threads = malloc(n * sizeof(pthread_t));
     ThreadArgs1 *targs = malloc(n * sizeof(ThreadArgs1));

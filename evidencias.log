@@ -62,3 +62,14 @@ Undefined symbols for architecture arm64:
       _worker2 in pthreads2-37051e.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
+gcc-16 -Wall -Wextra -O2 -std=c11 -fopenmp -c serial.c -o serial.o
+gcc-16 -Wall -Wextra -O2 -std=c11 -fopenmp -c openmp_impl.c -o openmp_impl.o
+gcc-16 -Wall -Wextra -O2 -std=c11 -fopenmp -c pthreads1.c -o pthreads1.o
+gcc-16 -Wall -Wextra -O2 -std=c11 -fopenmp -c pthreads2.c -o pthreads2.o
+gcc-16 -Wall -Wextra -O2 -std=c11 -fopenmp -o mandelbrot main.o common.o serial.o openmp_impl.o pthreads1.o pthreads2.o -lpthread -lm -fopenmp
+Undefined symbols for architecture arm64:
+  "_compute_pthreads1", referenced from:
+      _main in main.o
+ld: symbol(s) not found for architecture arm64
+collect2: error: ld returned 1 exit status
+make: *** [mandelbrot] Error 1
